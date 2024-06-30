@@ -1,5 +1,8 @@
-#author - Naresh kumar. K
+#This project to scan and read the formal - QR(quick response) code
+#author - Naresh kumar K
 
+
+#importing required libraries
 import keyboard
 import time
 import os
@@ -29,7 +32,7 @@ try:
         if not ret:
             print("\033[91mERROR:\033[0m Failed to capture frame.")
             break
-        
+
         # Save the image
         cv2.imwrite(image_path, frame)
 
