@@ -1,3 +1,7 @@
 pillow
 pyzbar
 opencv-python
+time 
+os
+winsound
+keyboard
