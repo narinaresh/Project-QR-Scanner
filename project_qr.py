@@ -1,3 +1,5 @@
+#author - Naresh kumar. K
+
 import keyboard
 import time
 import os
