@@ -1,8 +1,7 @@
-#This project to scan and read the formal - QR(quick response) code
-#author - Naresh kumar K
+# This project to scan and read the formal - QR(quick response) code
+# author - Naresh kumar K
 
-
-#importing required libraries
+# importing required libraries
 import keyboard
 import time
 import os
@@ -10,6 +9,7 @@ from pyzbar.pyzbar import decode
 from PIL import Image
 import cv2
 import winsound
+import glob
 
 count = 0
 
@@ -73,3 +73,11 @@ finally:
     # Release the camera
     cap.release()
     cv2.destroyAllWindows()
+
+# Remove all .png files in the current directory
+for file in glob.glob("*.png"):
+    try:
+        os.remove(file)
+        print(f"Deleted: {file}")
+    except Exception as e:
+        print(f"Failed to delete {file}: {e}")
